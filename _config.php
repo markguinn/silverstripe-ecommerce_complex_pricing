@@ -1,23 +1,21 @@
 <?php
 
 
-/**
- * developed by www.sunnysideup.co.nz
- * author: Nicolaas - modules [at] sunnysideup.co.nz
-**/
-
 
 //copy the lines between the START AND END line to your /mysite/_config.php file and choose the right settings
-
-//===================---------------- START ecommerce_combo_product MODULE ----------------===================
-//MUST SET
+//===================---------------- START ecommerce_group_pricing MODULE ----------------===================
+//MUST SET - WHERE APPLICABLE
+//DataObject::add_extension("Product", "ComplexPriceBuyableDecorator");
+//DataObject::add_extension("ProductVariation", "ComplexPriceBuyableDecorator");
+//DataObject::add_extension("ComplexPriceObject", "ComplexPriceBuyableDecorator_ComplexPriceObject");
+//MAY SET
 /**
  * ADD TO ECOMMERCE.YAML:
-Order:
-	modifiers: [
+ProductsAndGroupsModelAdmin:
+	managed_modules: [
 		...
-		CombinationProductModifier
+		ComplexPriceObject
 	]
 */
 
-//===================---------------- END ecommerce_combo_product MODULE ----------------===================
+//===================---------------- END ecommerce_group_pricing MODULE ----------------===================
